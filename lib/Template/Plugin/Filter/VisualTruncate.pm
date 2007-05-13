@@ -17,28 +17,33 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
 Supported encodings on this module are UTF8, EUC-JP and system locale.
 
 If your template was written in UTF8, then 
+
     [% USE Filter.VisualTruncate 'utf8' %]
     [% row.comment | visual_truncate(20, '...') | html %]
 
 or EUC-JP
+
     [% USE Filter.VisualTruncate 'euc-jp' %]
     [% row.comment | visual_truncate(20, '...') | html %]
 
 or system locale
+
     [% USE Filter.VisualTruncate 'locale' %]
     [% row.comment | visual_truncate(20, '...') | html %]
 
 If parameters are not specified explicitly...
+
     [% row.comment | visual_truncate() | html %]
 
 default values is used.
+
     [% row.comment | visual_truncate(32, '...') | html %]
 
 =head1 FUNCTIONS

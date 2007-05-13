@@ -3,8 +3,16 @@ MANIFEST
 META.yml # Will be created by "make dist"
 Makefile.PL
 README
+lib/Template/Plugin/Filter/VisualTruncate/EUC_JP.pm
+lib/Template/Plugin/Filter/VisualTruncate/Locale.pm
+lib/Template/Plugin/Filter/VisualTruncate/UTF8.pm
 lib/Template/Plugin/Filter/VisualTruncate.pm
 t/00-load.t
+t/01-inernal_utf8.t
+t/02-utf8.t
+t/03-euc_jp.t
+t/04-locale.t
 t/boilerplate.t
 t/pod-coverage.t
 t/pod.t
+t/test_base_spec.txt
