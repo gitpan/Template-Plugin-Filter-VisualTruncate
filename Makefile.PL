@@ -9,6 +9,7 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Template/Plugin/Filter/VisualTruncate.pm',
     PL_FILES            => {},
     PREREQ_PM => {
+        'Encode'             => '2.23',
         'Test::More'         => 0,
         'Test::Base'         => 0,
         'Template'           => 0,

@@ -1,11 +1,12 @@
 --- #YAML:1.0
 name:                Template-Plugin-Filter-VisualTruncate
-version:             0.02
+version:             0.03
 abstract:            Filter Plugin for trimming text by the number of the columns of terminals and mobile phones.
 license:             ~
 generated_by:        ExtUtils::MakeMaker version 6.32
 distribution_type:   module
 requires:     
+    Encode:                        2.23
     Template:                      0
     Test::Base:                    0
     Test::More:                    0

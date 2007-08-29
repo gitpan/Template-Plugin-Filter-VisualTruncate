@@ -1,5 +1,8 @@
 Revision history for Template-Plugin-Filter-VisualTruncate
 
+0.03    2007-08-29 15:45:00
+	add Encode-2.23 to PREREQ_PM.
+
 0.02    2007/05/13 23:30:23 JST +0900
         fix MANIFEST.
 
