@@ -39,7 +39,7 @@ TODO: {
     SKIP: {
         skip "Cannot get system locale encoding.", 14 unless $encoding;
 
-        my $text = '本日';
+        my $text = 'abcd';
 
         Encode::from_to($text, 'utf8', $encoding, 1);
 

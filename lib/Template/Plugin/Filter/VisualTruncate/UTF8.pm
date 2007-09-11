@@ -23,7 +23,20 @@ sub width {
 
 sub trim {
     shift;
-    Text::VisualWidth::UTF8::trim(@_);
+    my $before_flag = utf8::is_utf8($_[0]);
+    my $truncated   = Text::VisualWidth::UTF8::trim(@_);
+    my $after_flag  = utf8::is_utf8($truncated);
+
+    unless ($before_flag == $after_flag) {
+        if ($before_flag) {
+            utf8::decode($truncated);
+        }
+        else {
+            utf8::encode($truncated);
+        }
+    }
+
+    $truncated;
 }
 
 1;
