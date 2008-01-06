@@ -1,22 +1,22 @@
-use strict;
-use warnings;
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
-WriteMakefile(
-    NAME                => 'Template::Plugin::Filter::VisualTruncate',
-    AUTHOR              => 'bokutin <bokutin@cpan.org>',
-    VERSION_FROM        => 'lib/Template/Plugin/Filter/VisualTruncate.pm',
-    ABSTRACT_FROM       => 'lib/Template/Plugin/Filter/VisualTruncate.pm',
-    PL_FILES            => {},
-    PREREQ_PM => {
-        'Encode'             => '2.23',
-        'Test::More'         => 0,
-        'Test::Base'         => 0,
-        'Template'           => 0,
-        'Text::CharWidth'    => '0.04',
-        'Text::VisualWidth'  => '0.01',
-        'UNIVERSAL::require' => 0,
-    },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'Template-Plugin-Filter-VisualTruncate-*' },
-);
+# Define metadata
+name            'Template-Plugin-Filter-VisualTruncate';
+all_from        'lib/Template/Plugin/Filter/VisualTruncate.pm';
+
+# Specific dependencies
+build_requires  'Test::More'         => '0.42';
+build_requires  'Test::Base'         => 0;
+
+requires        'Encode'             => '2.23';
+requires        'Template'           => 0;
+requires        'Text::CharWidth'    => '0.04';
+requires        'Text::VisualWidth'  => '0.01';
+requires        'UNIVERSAL::require' => 0;
+
+recommends      'Your::OtherModule'  => '0.01';
+
+no_index        'directory'         => 'examples';
+
+auto_install;
+WriteAll;

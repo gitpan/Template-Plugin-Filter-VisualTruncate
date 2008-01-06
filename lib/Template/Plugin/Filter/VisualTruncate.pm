@@ -11,13 +11,9 @@ use UNIVERSAL::require;
 
 Template::Plugin::Filter::VisualTruncate - Filter Plugin for trimming text by the number of the columns of terminals and mobile phones.
 
-=head1 VERSION
-
-Version 0.04
-
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
